@@ -14,7 +14,7 @@ module.exports = (env, argv) => ({
 
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[hash].js'
+    filename: '[name].js'
   },
 
   node: false,
