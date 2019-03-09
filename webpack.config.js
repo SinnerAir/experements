@@ -63,7 +63,12 @@ module.exports = (env, argv) => ({
       from: path.resolve(__dirname, 'static'),
       to: path.resolve(__dirname, 'docs'),
       toType: 'dir'
-    }]),
+    },
+    {
+      from: path.resolve(__dirname, 'manifest.json'),
+      to: path.resolve(__dirname, 'docs')
+    }
+  ]),
     new SWPrecacheWebpackPlugin({
       cacheId: 'my-pwa-vue-app',
       filename: 'service-worker.js',
