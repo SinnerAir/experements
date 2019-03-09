@@ -13,7 +13,7 @@ module.exports = (env, argv) => ({
   entry: './src/app.js',
 
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     filename: '[name].js'
   },
 
@@ -53,7 +53,7 @@ module.exports = (env, argv) => ({
   },
 
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['docs']),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'static', 'index.html'),
@@ -61,15 +61,15 @@ module.exports = (env, argv) => ({
     }),
     new CopyWebpackPlugin([{
       from: path.resolve(__dirname, 'static'),
-      to: path.resolve(__dirname, 'dist'),
+      to: path.resolve(__dirname, 'docs'),
       toType: 'dir'
     }]),
     new SWPrecacheWebpackPlugin({
       cacheId: 'my-pwa-vue-app',
       filename: 'service-worker.js',
-      staticFileGlobs: ['dist/**/*.{js,css}', '/'],
+      staticFileGlobs: ['docs/**/*.{js,css}', '/'],
       minify: true,
-      stripPrefix: 'dist/',
+      stripPrefix: 'docs/',
       dontCacheBustUrlsMatching: /\.\w{6}\./
     })
   ],
