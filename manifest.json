@@ -1,19 +1,19 @@
 {
-    "short_name": "FirstVuePWA",
-    "name": "First Vue PWA App",
+    "short_name": "VAdmin PWA",
+    "name": "PWA version admin on vue",
     "icons": [
       {
-        "src": "/192.png",
+        "src": "192.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "/512.png",
+        "src": "512.png",
         "type": "image/png",
         "sizes": "512x512"
       }
     ],
-    "start_url": "/?utm_source=a2hs",
+    "start_url": "/",
     "background_color": "#FFFFFF",
     "display": "standalone",
     "scope": "/",
